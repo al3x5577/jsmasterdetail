@@ -1,0 +1,28 @@
+{
+  "name": "jsmasterdetail",
+  "version": "0.1.2",
+  "description": "js master detail view",
+  "type": "commonjs",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/al3x5577/jsmasterdetail.git"
+  },
+  "keywords": [
+    "MasterDetail"
+  ],
+  "author": "Alexander Schmidt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/al3x5577/jsmasterdetail/issues"
+  },
+  "homepage": "https://github.com/al3x5577/jsmasterdetail#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "ts-loader": "^9.3.1"
+  }
+}

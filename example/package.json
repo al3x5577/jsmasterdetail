@@ -5,6 +5,8 @@
   "license": "ISC",
   "version": "0.1.1",
   "type": "module",
+  "private": "false",
+  "main": "dist/masterdetail.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -13,5 +15,8 @@
   "devDependencies": {
     "typescript": "^4.6.4",
     "vite": "^3.0.7"
+  },
+  "dependencies": {
+    "jsmasterdetail": "file:../package"
   }
 }

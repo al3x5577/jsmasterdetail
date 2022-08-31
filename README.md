@@ -23,7 +23,7 @@ The following is an example that uses a popup as detail view.
     <div class="button" id="back">Back</div>
 </div>
 ``` 
-[index.html](index.html)
+[index.html](example/index.html)
 
 To initialise the master detail view you have to pass your html elements to the MasterDetail class.
 
@@ -59,4 +59,4 @@ document.querySelector('#master2')?.addEventListener('click', () => {
 });
 
 ```
-[main.ts](src/main.ts)
+[main.ts](example/src/main.ts)

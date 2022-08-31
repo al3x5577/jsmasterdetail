@@ -1,5 +1,6 @@
-import { MasterDetail } from './MasterDetail'
-import './style.css'
+import { MasterDetail } from "jsmasterdetail";
+
+import './style.css';
 
 let masterDetail = new MasterDetail(
   toMaster,

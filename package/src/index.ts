@@ -1,0 +1,2 @@
+
+export { MasterDetail } from "./MasterDetail";
