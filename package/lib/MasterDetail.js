@@ -58,6 +58,8 @@ var MasterDetail = /** @class */ (function () {
         // Check if view is already in detail view
         if (this.state.mode == MasterDetailMode.detail)
             return;
+        // Set content
+        this.state.content = content;
         this.goToDetail();
         // Scroll into position if neccessary
         if (scroll && this.scrollContainerDetail) {
@@ -69,7 +71,6 @@ var MasterDetail = /** @class */ (function () {
             this.detailContentContainer.innerHTML = content;
         // Update state
         this.state.mode = MasterDetailMode.detail;
-        this.state.content = content;
         // Push site change
         if (pushState)
             history.pushState(this.state, '');
