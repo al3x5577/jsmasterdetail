@@ -33,7 +33,6 @@ var MasterDetail = /** @class */ (function () {
         }
         // Listen for page switches
         addEventListener('popstate', function (event) {
-            console.log('pop');
             switch (event.state.mode) {
                 case MasterDetailMode.master:
                     if (scrollContainerDetail)
@@ -58,19 +57,18 @@ var MasterDetail = /** @class */ (function () {
         // Check if view is already in detail view
         if (this.state.mode == MasterDetailMode.detail)
             return;
-        // Set content
-        this.state.content = content;
+        // Place content if neccessary
+        if (content && this.detailContentContainer)
+            this.detailContentContainer.innerHTML = content;
         this.goToDetail();
         // Scroll into position if neccessary
         if (scroll && this.scrollContainerDetail) {
             console.log('Scroll to: ' + scroll);
             this.scrollContainerDetail.scrollTo(0, scroll);
         }
-        // Place content if neccessary
-        if (content && this.detailContentContainer)
-            this.detailContentContainer.innerHTML = content;
         // Update state
         this.state.mode = MasterDetailMode.detail;
+        this.state.content = content;
         // Push site change
         if (pushState)
             history.pushState(this.state, '');

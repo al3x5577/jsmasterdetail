@@ -52,7 +52,6 @@ export class MasterDetail {
 
         // Listen for page switches
         addEventListener('popstate', (event) => {
-            console.log('pop');
             switch (event.state.mode) {
                 case MasterDetailMode.master:
                     if (scrollContainerDetail)
@@ -79,8 +78,9 @@ export class MasterDetail {
         if (this.state.mode == MasterDetailMode.detail)
             return;
 
-        // Set content
-        this.state.content = content;
+        // Place content if neccessary
+        if (content && this.detailContentContainer)
+            this.detailContentContainer.innerHTML = content;
 
         this.goToDetail();
 
@@ -90,12 +90,9 @@ export class MasterDetail {
             this.scrollContainerDetail.scrollTo(0, scroll);
         }
 
-        // Place content if neccessary
-        if (content && this.detailContentContainer)
-            this.detailContentContainer.innerHTML = content;
-
         // Update state
         this.state.mode = MasterDetailMode.detail;
+        this.state.content = content;
 
         // Push site change
         if (pushState)

@@ -1,6 +1,6 @@
 {
   "name": "jsmasterdetail",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "js master detail view",
   "type": "commonjs",
   "main": "lib/index.js",
